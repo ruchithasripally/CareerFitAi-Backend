@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: careerfitai-backend
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    plan: free
+    region: oregon
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: DB_URL
+        sync: false
+        # Example: jdbc:mysql://your-mysql-host.com:3306/careerfitai?useSSL=true&allowPublicKeyRetrieval=true
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: FRONTEND_URL
+        value: https://careerfitai.vercel.app,http://localhost:5500
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod

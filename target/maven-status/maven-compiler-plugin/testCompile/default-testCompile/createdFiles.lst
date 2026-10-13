@@ -1,0 +1,6 @@
+com\careerfitai\util\SampleFileGenerator.class
+com\careerfitai\service\TextExtractionServiceTest.class
+com\careerfitai\controller\ResumeControllerTest.class
+com\careerfitai\service\SkillExtractionServiceTest.class
+com\careerfitai\CareerFitAiApplicationTests.class
+com\careerfitai\service\FileValidationServiceTest.class
